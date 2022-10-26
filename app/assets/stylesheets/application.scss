@@ -22,7 +22,7 @@
     font-family: 'Red Hat Display', sans-serif !important;
 
     // background-image: asset-url("mimosa.png") no-repeat center fixed;
-    background-color: #FCD338;
+    // background-color: #FCD338;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -35,6 +35,8 @@
   color:#424242;
   letter-spacing: 1px;
   word-spacing: 2px;
+  background-image: asset-url("mimosa.png") no-repeat center fixed;
+  background-color: #FCD338;
 
  }
 
