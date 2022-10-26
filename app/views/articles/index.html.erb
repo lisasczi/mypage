@@ -1,0 +1,19 @@
+  <%= render 'pages/about' %>
+
+<div class="container" id="crea">
+<h1 class="main-title" >Voici les projets auxquels j'ai participé</h1>
+    <div class="all-articles">
+        <% @articles.each_with_index do |article, index| %>
+            <div class="card_<%= index +1 %>">
+                <%= link_to article_path(article.id) do %>
+                  <div class="txtcontenu">
+                    <%=article.small_description %>
+                  </div>
+                  <%= image_tag article.image, alt: "#{article.title} image", crop: :fill, class:"imgcontenu"%>
+                  <% end %>
+            </div>
+          <% end %>
+      </div>
+</div>
+
+  <%= render template:'contacts/new' %>

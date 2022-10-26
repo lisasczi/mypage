@@ -1,0 +1,50 @@
+<div class="container" id="articlebg">
+
+<br>
+      <% if @article.title == "Buddy"%>
+          <div class="article_card_buddy">
+           <div class="articles_card_title_buddy">
+                <h1><%= @article.title %></h1>
+              </div>
+            <div class="articles_card_photo_buddy">
+              <%= image_tag @article.image, alt: "#{@article.title} image"%>
+            </div>
+          <%else%>
+            <div class="article_card">
+              <div class="articles_card_photo">
+                <%= image_tag @article.image, alt: "#{@article.title} image"%>
+                </div>
+              <div class="articles_card_title">
+                  <h1><%= @article.title %></h1>
+                </div>
+          <%end%>
+              <div class="articles_card_description">
+                  <p><%= @article.description %></p>
+                </div>
+              <div class="captures_ecran">
+                  <p>Je vous propose plusieurs captures d'écran pour ce projet.</p>
+                </div>
+            <% if @article.title == "Buddy"%>
+                <div class="photo-slider-buddy">
+                    <%= render 'shared/sliderbuddy' %>
+                </div>
+              <%else%>
+                <div class="photo-slider">
+                      <%= render 'shared/slider' %>
+                  </div>
+              <%end%>
+
+   </div>
+
+
+  <% if @article.title == "Buddy"%>
+    <div class="videoBuddy">
+        <p>Buddy est donc le projet de fin de bootcamps. Après sept semaines de formation intensive, nous avons eu les deux dernières semaines pour inventer et créer de toute pièce cette application. Nous l'avons présenté en public le 10 Juin 2022 lors du demo Day.
+         </br>
+        Afin de mieux vous rendre compte des capacités de Buddy, voici la video.</p>
+        <%= link_to("https://www.youtube.com/watch?v=THk2evQJ47g&list=PLwqwOtDwK_ZbrYfXeC5nEza9e2sMoqRHj&index=2&t=62s", :target => "_blank") do %> <%= image_tag "wagon.jpg", class: "videophoto" %> <% end %>
+    </div>
+  <%end%>
+
+</div>
+<%= render 'shared/footer' %>
