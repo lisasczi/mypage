@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   get "accueil", to: "pages#accueil"
 
   resources :articles
-    # resources :pages
   resources :contacts, only: [:new, :create]
 end
