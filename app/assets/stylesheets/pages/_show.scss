@@ -23,7 +23,7 @@
   transition: transform 1s;
   width: auto;
   display: grid;
-  grid-auto-rows: repeat(5, 1fr);
+  grid-auto-rows: repeat(6, 1fr);
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2vw;
   margin-bottom: 1vw;
@@ -116,13 +116,23 @@
     .videophoto {
       height: 40vw;
       width: 65vw;
-  }
-  .articles_card_title h1{
-    font-size: 10vw !important;
-  }
-  .articles_card_title_buddy h1{
-    font-size: 10vw !important;
-  }
+    }
+    .articles_card_title h1{
+      font-size: 10vw !important;
+    }
+    .articles_card_title_buddy h1{
+      font-size: 10vw !important;
+    }
+    .articles_card_description{
+      font-size: 20px;
+    }
+    .captures_ecran{
+      font-size: 20px;
+    }
+    .videoBuddy{
+      font-size: 20px;
+    }
+
   }
   @media screen and (min-width: 425px) {
     .articles_card_photo_buddy{
